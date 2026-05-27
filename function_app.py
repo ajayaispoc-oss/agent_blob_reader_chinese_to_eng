@@ -13,7 +13,7 @@ app = func.FunctionApp()
 
 @app.blob_trigger(
     arg_name="myblob", 
-    path="input-containerc/{name}.pdf", 
+    path="input-container/{name}.pdf", 
     connection="AzureWebJobsStorage"
 )
 def agent_blob_reader_chinese_to_eng(myblob: func.InputStream):
